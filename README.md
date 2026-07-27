@@ -1,6 +1,6 @@
 ## Overview
 
-Word goal plugin for document editor helps tracking your writing progess without a need to check document stats from time to time.
+Word goal plugin for document editor helps tracking your writing progress without a need to check document stats from time to time.
 
 ### Installation:
 
