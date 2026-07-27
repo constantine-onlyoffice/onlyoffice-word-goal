@@ -1,0 +1,34 @@
+{
+  "name": "Word goal",
+  "guid": "asc.{877e2264-ae50-433f-a09f-aa6c6971b8cd}",
+  "version": "1.0.0",
+  "variations": [
+    {
+      "description": "Adds simple word goal counter.",
+      "url": "index.html",
+      "icons": ["resources/light/icon.png", "resources/light/icon@2x.png"],
+      "icons2": [
+        {
+          "style": "light",
+
+          "100%": {
+            "normal": "resources/light/icon.png"
+          }
+        },
+        {
+          "style": "dark",
+
+          "100%": {
+            "normal": "resources/dark/icon.png"
+          }
+        }
+      ],
+      "type": "panel",
+      "isViewer": true,
+      "EditorsSupport": ["word"],
+      "initDataType": "text",
+      "isUpdateOleOnResize": false,
+      "buttons": []
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Word goal</title>
+    <script type="text/javascript" src="./../v1/plugins.js"></script>
+    <script src="vendor/jquery/jquery-3.7.1.min.js"></script>
+    <script src="scripts/code.js"></script>
+  </head>
+  <style>
+    html,
+    :root {
+      --shake-distance: 6px;
+      --shake-overshoot: 4px;
+      --shake-dur-a: 80ms;
+      --shake-dur-b: 60ms;
+      --shake-ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --error-border: #e23014;
+      --revert-dur: 280ms;
+    }
+    body {
+      height: 100% !important;
+      font-size: small;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    input {
+      width: -webkit-fill-available;
+      height: 19px;
+      padding-left: 10px;
+      margin: 0 10px 0 0;
+    }
+
+    .t-input {
+      transition: border-color 150ms ease-out;
+      will-change: transform;
+      border: 1px solid black;
+      border-radius: 3px;
+      outline: none;
+    }
+
+    .t-input.is-error {
+      border-color: var(--error-border);
+      transition: border-color var(--revert-dur, 280ms) ease-out;
+    }
+
+    .t-input.is-shaking {
+      animation: t-input-shake
+        calc(var(--shake-dur-a) * 2 + var(--shake-dur-b) * 2) linear;
+    }
+
+    @keyframes t-input-shake {
+      0% {
+        transform: translateX(0);
+        animation-timing-function: var(--shake-ease);
+      }
+
+      28.57% {
+        transform: translateX(var(--shake-distance));
+        animation-timing-function: var(--shake-ease);
+      }
+
+      57.14% {
+        transform: translateX(calc(var(--shake-distance) * -1));
+        animation-timing-function: var(--shake-ease);
+      }
+
+      78.57% {
+        transform: translateX(var(--shake-overshoot));
+        animation-timing-function: var(--shake-ease);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .t-input {
+        animation: none !important;
+        transform: none !important;
+      }
+    }
+    #apply {
+      height: 23px;
+    }
+    .counter_wrapper {
+      padding: 10px;
+    }
+    .outer-bar {
+      width: -webkit-fill-available;
+      height: 24px;
+      background-color: #a1a1a1;
+      border: 0px;
+      border-radius: 7px;
+      padding: 3px;
+      margin-top: 4px;
+    }
+    .inner-bar {
+      height: 24px;
+      width: 0;
+      max-width: 100%;
+      background-color: #d8d8d8;
+      border: 0px;
+      border-radius: 5px;
+      transition: width 0.4s ease;
+    }
+    .achieved {
+      display: block !important;
+    }
+    #progress {
+      text-align: center;
+    }
+    .post-bar {
+      font-size: larger;
+      text-align: center;
+      padding-top: 10px;
+    }
+  </style>
+  <body
+    style="width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden"
+  >
+    <div class="main_wrapper">
+      <div class="main">
+        <div class="t-input-wrap" style="padding: 10px">
+          <div style="padding-bottom: 4px">Set your goal:</div>
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <input
+              class="t-input"
+              type="number"
+              min="1"
+              value="500"
+              required
+              id="count"
+            />
+            <div class="word-count-value" style="display: none">500</div>
+            <button id="apply">OK</button>
+          </div>
+        </div>
+        <div class="counter_wrapper">
+          <label class="i18n" for="count" id="progress">Your progress: </label
+          ><span id="rate">#</span>
+          <div class="outer-bar">
+            <div class="inner-bar"></div>
+          </div>
+          <div class="post-bar" style="display: none">
+            The goal has been achieved!
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
