@@ -83,6 +83,20 @@
       updateCounter();
     });
   }
+  window.Asc.plugin.onTranslate = function () {
+    let set_goal = document.getElementById("set_goal");
+    if (set_goal) {
+      set_goal.innerHTML = window.Asc.plugin.tr("Set your goal:");
+    }
+    let progress = document.getElementById("progress");
+    if (progress) {
+      progress.innerHTML = window.Asc.plugin.tr("Your progress: ");
+    }
+    let goal_msg = document.getElementById("goal_msg");
+    if (goal_msg) {
+      goal_msg.innerHTML = window.Asc.plugin.tr("The goal has been achieved!");
+    }
+  };
 
   window.Asc.plugin.button = function (id) {
     this.executeCommand("close", "");

@@ -1,10 +1,28 @@
 {
   "name": "Word goal",
+  "nameLocale": {
+    "ru": "Цель по словам",
+    "de": "Wortziel",
+    "es": "Objetivo de palabras",
+    "fr": "Objectif en mots",
+    "it": "Obiettivo di Word",
+    "ja": "単語の目標",
+    "zh": "词汇目标"
+  },
   "guid": "asc.{877e2264-ae50-433f-a09f-aa6c6971b8cd}",
   "version": "1.0.0",
   "variations": [
     {
       "description": "Adds simple word goal counter.",
+      "descriptionLocale": {
+        "ru": "Добавляет простой счетчик слов.",
+        "fr": "Ajoute un compteur d'objectifs par mot très simple.",
+        "it": "Aggiunge un semplice contatore di parole.",
+        "ja": "シンプルな単語目標カウンターを追加します。",
+        "es": "Añade un sencillo contador de palabras.",
+        "de": "Fügt einen einfachen Wortzielzähler hinzu.",
+        "zh": "添加了一个简单的单词目标计数器。"
+      },
       "url": "index.html",
       "icons": ["resources/light/icon.png", "resources/light/icon@2x.png"],
       "icons2": [
