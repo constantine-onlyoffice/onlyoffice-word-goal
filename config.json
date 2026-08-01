@@ -10,6 +10,7 @@
     "zh": "词汇目标"
   },
   "guid": "asc.{877e2264-ae50-433f-a09f-aa6c6971b8cd}",
+  "offered": "Constantine ONLYOFFICE",
   "version": "1.0.0",
   "variations": [
     {
@@ -24,20 +25,41 @@
         "zh": "添加了一个简单的单词目标计数器。"
       },
       "url": "index.html",
-      "icons": ["resources/light/icon.png", "resources/light/icon@2x.png"],
-      "icons2": [
+      "icons": [
         {
           "style": "light",
-
           "100%": {
             "normal": "resources/light/icon.png"
+          },
+          "125%": {
+            "normal": "resources/light/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/light/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/light/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/light/icon@2x.png"
           }
         },
         {
           "style": "dark",
-
           "100%": {
             "normal": "resources/dark/icon.png"
+          },
+          "125%": {
+            "normal": "resources/dark/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/dark/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/dark/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/dark/icon@2x.png"
           }
         }
       ],
@@ -46,7 +68,19 @@
       "EditorsSupport": ["word"],
       "initDataType": "text",
       "isUpdateOleOnResize": false,
-      "buttons": []
+      "buttons": [],
+      "store": {
+        "background": {
+          "light": "#444444",
+          "dark": "#444444"
+        },
+        "screenshots": [],
+        "icons": {
+          "light": "resources/store/icons",
+          "dark": "resources/store/icons"
+        },
+        "categories": ["work"]
+      }
     }
   ]
 }
