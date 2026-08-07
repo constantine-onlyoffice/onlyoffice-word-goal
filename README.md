@@ -15,4 +15,7 @@ After installation go to *Plugins* tab and start *Word goal* plugin. Set your cu
 * Plugin works globally, i.e. your custom goal will apply for all documents and remains after closing the editor.
 * You can switch between any other tabs on the left panel and the progress still will be tracked.
 
+### Known issues:
+* Plugin counts words specifically, asian languages symbols aren't supported as of now.
+
 [1]: https://api.onlyoffice.com/docs/plugins/development-workflow/installing-and-testing/desktop-editors-installation/

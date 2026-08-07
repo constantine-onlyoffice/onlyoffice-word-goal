@@ -5,9 +5,7 @@
     "de": "Wortziel",
     "es": "Objetivo de palabras",
     "fr": "Objectif en mots",
-    "it": "Obiettivo di Word",
-    "ja": "単語の目標",
-    "zh": "词汇目标"
+    "it": "Obiettivo di Word"
   },
   "guid": "asc.{877e2264-ae50-433f-a09f-aa6c6971b8cd}",
   "offered": "Constantine ONLYOFFICE",
@@ -19,10 +17,8 @@
         "ru": "Добавляет простой счетчик слов.",
         "fr": "Ajoute un compteur d'objectifs par mot très simple.",
         "it": "Aggiunge un semplice contatore di parole.",
-        "ja": "シンプルな単語目標カウンターを追加します。",
         "es": "Añade un sencillo contador de palabras.",
-        "de": "Fügt einen einfachen Wortzielzähler hinzu.",
-        "zh": "添加了一个简单的单词目标计数器。"
+        "de": "Fügt einen einfachen Wortzielzähler hinzu."
       },
       "url": "index.html",
       "icons": [
